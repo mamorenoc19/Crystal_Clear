@@ -1,0 +1,104 @@
+{% extends "Crystal_Clear_App/base.html" %}
+{% load static %}
+    <!-- Add your code below: -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo w3-text-cyan w3-center"><b>Cristal-Clear</b></h1>
+</div>
+<!-- Sobre nosotros -->
+<div class="w3-container" id="sobre_nosotros" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-cyan"><b>Sobre nosotros.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+    <p>Somos una plataforma en la cual permite la realización de exámenes virtuales de profesores a estudiantes</p>
+    <p>
+        CristalClear nació de la necesidad de tener una plataforma en la cual se pueda realizar exámenes sin que en esta
+        se
+        puedan presentar casos de fraude, ya sea el buscar las respuestas por otros medios sin la autorización del
+        docente
+        encargado, el compartir las respuestas con otras personas o el plagio de exámenes.
+    </p>
+    <p>
+        En la virtualidad es bastante difícil el manejo y el control de este tipo de conductas, debido al poco control
+        que tiene
+        un profesor o educador a los alumnos que realizan sus exámenes de forma virtual, es por eso que nuestra
+        aplicación está
+        pensada para poder ayudar al profesor más control y supervisión a la hora de que el estudiante realice la
+        evaluación
+    </p>
+    <p>
+        Lo que nos diferencia de otras aplicaciones son nuestras funciones que permiten una mejor transparencia
+        al momento en el que un estudiante realiza una evaluación. Entre ellas esta la verificación de preguntas.
+        Lo que hace este apartado es realizar la verificación de la pregunta a través de la web una vez creada,
+        esto para que el profesor pueda cambiar la formulación de la pregunta en caso de encontrarla fácilmente
+        en algún sitio web, por ejemploe esta función lo que permite es reducir la probabilidad de que pueda ser
+        copiada fácilmente en la web.
+    </p>
+</div>
+
+<!-- Packages / Pricing Tables -->
+<div class="w3-container" id="servicios" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-cyan"><b>Servicios.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+    <p> En nuestros servicios tenemos 2 tipos de usuario que permiten el correcto uso de la plataforma.
+    </p>
+</div>
+
+<div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-light-black w3-center">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">Estudiante</li>
+            <li class="w3-padding-16">Ingreso y búsqueda de clases</li>
+            <li class="w3-padding-16">Ingreso y búsqueda de exámenes</li>
+            <li class="w3-padding-16">Presentación de exámenes</li>
+            <li class="w3-padding-16">Estadísticas personalizadas del exámen</li>
+            <li class="w3-light-grey w3-padding-24">
+                <a href="register.html" onclick="w3_close()"
+                    class="w3-white w3-bar-item w3-button w3-hover-black">Registrarse</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w3-half">
+        <ul class="w3-ul w3-light-grey w3-center">
+            <li class="w3-cyan w3-xlarge w3-padding-32">Profesor</li>
+            <li class="w3-padding-16">Creación, ingreso y búsqueda de clases</li>
+            <li class="w3-padding-16">Creación, ingreso y búsqueda de clases</li>
+            <li class="w3-padding-16">Monitoreo de exámenes</li>
+            <li class="w3-padding-16">Estadísticas generales de los exámenes</li>
+            <li class="w3-light-grey w3-padding-24">
+                <a href="register.html" onclick="w3_close()"
+                    class="w3-cyan w3-bar-item w3-button w3-hover-white">Registrarse</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="w3-container" id="contacto" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-cyan"><b>Contacto.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
+    <p>¿Quieres tener más información de nosotros y que podemos ofrecer?¿Te quedaron dudas? ¡Déjanos tu
+        información de contacto y escribe lo que nos quieras comentar!, con gusto te leeremos
+    </p>
+    <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+            <label>Nombre</label>
+            <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+            <label>Mensaje</label>
+            <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-cyan w3-margin-bottom">Enviar</button>
+    </form>
+</div>
+{% endblock %}
