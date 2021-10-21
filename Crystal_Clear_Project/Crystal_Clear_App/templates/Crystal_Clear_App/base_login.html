@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Clear</title>
+    <title>Inicio - Crystal_Clear_App</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/Crystal_Clear/Crystal_Clear_Project/Crystal_Clear_App/static/Crystal_Clear_App/style.css">
     {% block head %}
     {% endblock %}
 </head>
 <body>
+    <div class="w3-bar w3-cyan w3-collapse w3-top w3-large w3-padding w3-xlarge ">
+        <a href="#" class="w3-bar-item w3-button w3-white w3-right"><i class="fa fa-user"></i></a>
+        <div class="w3-content">
+            <a href="#" class="w3-bar-item w3-button w3-right w3-mobile"><i class="fa fa-search"></i></a>
+            <input type="text" class="w3-bar-item w3-input w3-white w3-mobile w3-right" placeholder="Search..">
+        </div>
+    </div>
     <!-- Barra Lateral/Menu -->
     <nav class="w3-sidebar w3-cyan w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
         id="mySidebar"><br>
@@ -21,15 +27,11 @@
         <div class="w3-container">
             <h3 class="w3-padding-64 w3-center"><b>Logo</b></h3>
         </div>
-        <div class="w3-bar-block w3-center w3-padding ">
-            <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-xlarge">Inicio</a>
-            <a href="#sobre_nosotros" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-xlarge">Sobre Nosotros</a>
-            <a href="#servicios" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-xlarge ">Servicios</a>
-            <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-xlarge ">Contacto</a>
-        </div>
-        <div>
-            <a href="{% url 'login' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-white w3-hover-cyan w3-half w3-border w3-round-xlarge">Ingreso</a>
-            <a href="{% url 'sign_in' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-white w3-hover-cyan w3-half w3-border w3-round-xlarge">Registro</a>
+        <div class="w3-bar-block w3-center">
+            <a href="{% url 'home_login' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Clases</a>
+            <a href="{% url 'clase' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Clase 1</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Estadísticas</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log-out</a>
         </div>
     </nav>
     
@@ -41,16 +43,13 @@
     
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-        id="myOverlay">
-    </div>
-
-    <div class="w3-main" >
-        <div class="w3-row">
-            <div class="w3-container w3-col s3" ></div>
-            <div class="w3-container w3-col s9">
-                {% block content %}
-                {% endblock %}
-            </div>
+        id="myOverlay"></div>
+    
+    <!-- INICIO -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+        <div class="w3-container" id="clases" style="margin-top:75px">
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
 </body>

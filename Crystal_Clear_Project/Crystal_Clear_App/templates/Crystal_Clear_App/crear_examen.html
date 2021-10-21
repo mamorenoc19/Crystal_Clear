@@ -1,0 +1,50 @@
+{% extends "Crystal_Clear_App/base_login.html" %}
+{% load static %}
+<!-- Add your code below: -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+{% endblock %}
+{% block content %}
+        <h1 class="w3-jumbo w3-text-black w3-padding"><b>Creación de examen</b></h1>
+        <form>
+            <div class="w3-section w3-twothird ">
+                <label>Nombre del examen</label>
+                <input class="w3-input w3-border" type="text">
+            </div>
+            <div class="w3-section w3-third ">
+                <label>Fecha del exámen</label>
+                <input class="w3-input w3-border" type="date">
+            </div>
+        </form>
+        </div>
+        <!-- CLASES -->
+        <div class="w3-panel">
+            <div class="w3-container" id="clases" style="margin-top:75px">
+                <div class="w3-row-padding">
+                    <div id="myDIV" class="header">
+                        <h2 style="margin:5px">Agregar Pregunta</h2>
+                        <input class="w3-input w3-border" type="text" id="myInput" placeholder="Title...">
+                        <select name="option" id="usuario" class="w3-select w3-border">
+                            <option class="w3-center" value="" disabled selected> Elige tipo de pregunta</option>
+                            <option value="1">Tipo pregunta #1</option>
+                            <option value="2">Tipo pregunta #2</option>
+                        </select>
+                        <span onclick="newElement()" class="addBtn w3-button">Add</span>
+                    </div>
+                    <ul id="myUL">
+                        <li>Ejemplo</li>
+                    </ul>
+                </div>
+            </div>
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-cyan w3-margin-bottom">Crear examen</button>
+        </div>
+        </div>
+        
+        </div>
+        
+        <!-- W3.CSS Container -->
+        <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+            <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                    class="w3-hover-opacity">w3.css</a></p>
+        </div>
+{% endblock %}
