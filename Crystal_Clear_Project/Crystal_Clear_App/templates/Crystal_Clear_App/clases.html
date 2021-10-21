@@ -1,0 +1,53 @@
+
+{% extends "Crystal_Clear_App/base_login.html" %}
+{% load static %}
+<!-- Add your code below: -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Clases -->
+<div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo w3-text-black w3-padding w3-center"><b>Clases</b></h1>
+</div>
+<div class="w3-container" id="clases" style="margin-top:75px">
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom w3-border">
+            <div class="w3-container w3-white w3-center w3-padding">
+                <p><b>Clase #1</b></p>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                    congue gravida diam non fringilla.</p>
+                <a href="{% url 'clase' %}" onclick=" w3_close()"
+                    class=" w3-hover-cyan w3-button w3-padding w3-border">Ingreso</a>
+                <a href="{% url 'crear_clase' %}" onclick="w3_close()"
+                    class=" w3-hover-cyan w3-button w3-padding w3-border">Editar</a>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom w3-border">
+            <div class="w3-container w3-white w3-center w3-padding">
+                <p><b>Clase #2</b></p>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                    congue gravida diam non fringilla.</p>
+                <a href="{% url 'clase' %}" onclick=" w3_close()"
+                    class=" w3-hover-cyan w3-button w3-padding w3-border">Ingreso</a>
+                <a href="{% url 'crear_clase' %}" onclick="w3_close()"
+                    class=" w3-hover-cyan w3-button w3-padding w3-border">Editar</a>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom w3-border">
+            <div class="w3-container w3-white w3-center w3-padding">
+                <p><b>Clase #3</b></p>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                    congue gravida diam non fringilla.</p>
+                <a href="{% url 'clase' %}" onclick=" w3_close()"
+                    class=" w3-hover-cyan w3-button w3-padding w3-border">Ingreso</a>
+                <a href="{% url 'crear_clase' %}" onclick="w3_close()"
+                    class=" w3-hover-cyan w3-button w3-padding w3-border">Editar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

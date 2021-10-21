@@ -18,6 +18,9 @@ def home_login(request):
 
 lista_estudiante = ['Camila', 'alejandra', 'jose miguel']
 
+def clases(request):
+    return(render(request, "Crystal_Clear_App/clases.html"))
+
 def clase(request):
     context = {'estudiante':estudiante}
     return render(request, "Crystal_Clear_App/clase.html", context)
@@ -25,6 +28,9 @@ def clase(request):
 
 estudiante = [{'nombre': 'camila', 'numero': 1},
                     {'nombre': 'jose', 'numero': 2}, {'nombre': 'milerna', 'numero': 3}, {'nombre': 'carlos', 'numero': 4}]
+
+def examen(request):
+    return render(request, "Crystal_Clear_App/examen.html")
 
 def crear_clase(request):
     return render(request, "Crystal_Clear_App/crear_clase.html")
