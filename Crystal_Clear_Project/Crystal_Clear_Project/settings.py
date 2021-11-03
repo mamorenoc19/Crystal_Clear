@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Crystal_Clear_App.apps.CrystalClearAppConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'Crystal_Clear_Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        "NAME": "db_crystal_clear",
+        "USER": "root",
+        "PASSWORD": "nqrSHZ24.",
+        "HOST": "localhost",
+        "PORT": 3306,
     }
 }
 
@@ -124,3 +129,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "manumorenocordoba@gmail.com"
+EMAIL_HOST_PASSWORD = "slplqqtotll19"

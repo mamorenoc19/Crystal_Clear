@@ -4,17 +4,37 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
 {% endblock %}
+{% load widget_tweaks %}
 {% block content %}
                 <h1 class="w3-jumbo w3-center"><b>Crear Clase</b></h1>
                 <div class="w3-container w3-center">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <button style="margin-bottom: 10px;" type="submit">Crear Clase</button>
+                        </form>
+
+
                     <form action="/action_page.php" target="_blank">
                         <div class="w3-section">
                             <label>Nombre de la clase</label>
                             <input class="w3-input w3-border" type="text" name="Name" required>
                         </div>
                         <div class="w3-section">
-                            <label>Id de la clase</label>
-                            <input class="w3-input w3-border" type="text" name="Id" required>
+                            <label>Descripcion de la clase</label>
+                            <input class="w3-input w3-border" type="text" name="Name" required>
+                        </div>
+                        <div class="w3-section">
+                            <label>Número de Creditos</label>
+                            <input class="w3-input w3-border" type="text" name="Name" required>
+                        </div>
+                        <div class="w3-section">
+                            <label>Profesor Encargado</label>
+                            <input class="w3-input w3-border" type="text" name="Name" required>
+                        </div>
+                        <div class="w3-section">
+                            <label>Estado</label>
+                            <input class="w3-input w3-border" type="text" name="Name" required>
                         </div>
                         <button type="submit" class="w3-button w3-block w3-padding-large w3-cyan w3-margin-bottom">Crear clase</button>
                     </form>

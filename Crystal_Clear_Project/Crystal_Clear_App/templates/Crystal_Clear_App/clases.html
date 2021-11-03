@@ -9,8 +9,9 @@
 {% block content %}
 
 <!-- Clases -->
-<div class="w3-container" style="margin-top:80px" id="showcase">
+<div class="w3-container w3-center" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo w3-text-black w3-padding w3-center"><b>Clases</b></h1>
+    <a href="{% url 'crear_clase' %}" onclick=" w3_close()" class="w3-cyan w3-hover-gray w3-button w3-xlarge w3-round-xlarge">Crear nueva clase</a>
 </div>
 <div class="w3-container" id="clases" style="margin-top:75px">
     <div class="w3-row-padding">
@@ -19,10 +20,7 @@
                 <p><b>Clase #1</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
                     congue gravida diam non fringilla.</p>
-                <a href="{% url 'clase' %}" onclick=" w3_close()"
-                    class=" w3-hover-cyan w3-button w3-padding w3-border">Ingreso</a>
-                <a href="{% url 'crear_clase' %}" onclick="w3_close()"
-                    class=" w3-hover-cyan w3-button w3-padding w3-border">Editar</a>
+                <a href="{% url 'clase' %}" onclick=" w3_close()"class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
             </div>
         </div>
         <div class="w3-third w3-container w3-margin-bottom w3-border">
@@ -30,10 +28,7 @@
                 <p><b>Clase #2</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
                     congue gravida diam non fringilla.</p>
-                <a href="{% url 'clase' %}" onclick=" w3_close()"
-                    class=" w3-hover-cyan w3-button w3-padding w3-border">Ingreso</a>
-                <a href="{% url 'crear_clase' %}" onclick="w3_close()"
-                    class=" w3-hover-cyan w3-button w3-padding w3-border">Editar</a>
+                <a href="{% url 'clase' %}" onclick=" w3_close()" class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
             </div>
         </div>
         <div class="w3-third w3-container w3-margin-bottom w3-border">
@@ -41,10 +36,7 @@
                 <p><b>Clase #3</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
                     congue gravida diam non fringilla.</p>
-                <a href="{% url 'clase' %}" onclick=" w3_close()"
-                    class=" w3-hover-cyan w3-button w3-padding w3-border">Ingreso</a>
-                <a href="{% url 'crear_clase' %}" onclick="w3_close()"
-                    class=" w3-hover-cyan w3-button w3-padding w3-border">Editar</a>
+                <a href="{% url 'clase' %}" onclick=" w3_close()" class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
             </div>
         </div>
     </div>

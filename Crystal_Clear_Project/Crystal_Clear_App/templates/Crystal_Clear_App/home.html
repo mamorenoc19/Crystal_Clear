@@ -1,8 +1,8 @@
 {% extends "Crystal_Clear_App/base.html" %}
 {% load static %}
-    <!-- Add your code below: -->
 {% block head %}
 <link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
     <h1 class="w3-jumbo w3-text-cyan w3-center"><b>Cristal-Clear</b></h1>
 </div>
 <!-- Sobre nosotros -->
-<div class="w3-container" id="sobre_nosotros" style="margin-top:75px">
+<div class="w3-container" id="sobre_nosotros" style="margin-top:60px">
     <h1 class="w3-xxxlarge w3-text-cyan"><b>Sobre nosotros.</b></h1>
     <hr style="width:50px;border:5px solid rgb(0, 0, 0)" class="w3-round">
     <p>Somos una plataforma en la cual permite la realización de exámenes virtuales de profesores a estudiantes</p>
@@ -82,7 +82,7 @@
     <p>¿Quieres tener más información de nosotros y que podemos ofrecer?¿Te quedaron dudas? ¡Déjanos tu
         información de contacto y escribe lo que nos quieras comentar!, con gusto te leeremos
     </p>
-    <form action="/action_page.php" target="_blank">
+    <form action="contacto/" method="POST"> {% csrf_token %}
         <div class="w3-section">
             <label>Nombre</label>
             <input class="w3-input w3-border" type="text" name="Name" required>
@@ -95,7 +95,7 @@
             <label>Mensaje</label>
             <input class="w3-input w3-border" type="text" name="Message" required>
         </div>
-        <button type="submit" class="w3-button w3-block w3-padding-large w3-cyan w3-margin-bottom">Enviar</button>
+        <button type="submit" value="Enviar" class="w3-button w3-block w3-padding-large w3-cyan w3-margin-bottom">Enviar</button>
     </form>
 </div>
 {% endblock %}
