@@ -4,7 +4,6 @@ from django.db import models
 
 
 class Profesor(models.Model):
-    id = models.PositiveSmallIntegerField(primary_key=True)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     edad = models.SmallIntegerField(default=0)
@@ -22,7 +21,6 @@ class Profesor(models.Model):
 
 
 class Estudiante(models.Model):
-    id = models.PositiveSmallIntegerField(primary_key=True)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     edad = models.SmallIntegerField(default=0)

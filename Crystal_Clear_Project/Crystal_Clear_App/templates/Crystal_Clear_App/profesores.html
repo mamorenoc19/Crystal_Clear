@@ -1,0 +1,36 @@
+{% extends "Crystal_Clear_App/base_login.html" %}
+{% load static %}
+<!-- Add your code below: -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<div class="w3-container w3-center" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo w3-text-black w3-padding w3-center"><b>Lista Profesores</b></h1>
+</div>
+<!-- CLASES -->
+<div class="w3-panel">
+    <div class="w3-center w3-padding">
+        <table class="w3-table w3-striped w3-white">
+            <tr class="w3-center">
+                <td></td>
+                <td class="w3-center"><b>Nombre<b></td>
+                <td class="w3-center"><b>Apellido<b></td>
+            </tr>
+            {% for profesor in profesores|dictsort:"nombre"%}
+            <tr class="w3-center">
+                <td class="w3-center"><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                <td class="w3-center">{{ profesor.nombre }}</td>
+                <td class="w3-center">{{ profesor.apellido }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url 'crear_profesores' %}" onclick=" w3_close()"
+            class="w3-cyan w3-hover-gray w3-button w3-xlarge w3-round-xlarge">Agregar profesor</a>
+    </div>
+</div>
+
+{% endblock %}
