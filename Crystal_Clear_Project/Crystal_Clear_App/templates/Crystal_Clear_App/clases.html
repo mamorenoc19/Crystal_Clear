@@ -14,32 +14,19 @@
     <a href="{% url 'crear_clase' %}" onclick=" w3_close()" class="w3-cyan w3-hover-gray w3-button w3-xlarge w3-round-xlarge">Crear nueva clase</a>
 </div>
 <div class="w3-container" id="clases" style="margin-top:75px">
-    <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom w3-border">
-            <div class="w3-container w3-white w3-center w3-padding">
-                <p><b>Clase #1</b></p>
-                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                    congue gravida diam non fringilla.</p>
-                <a href="{% url 'clase' %}" onclick=" w3_close()"class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
+    {% for clase in clases  %}
+        <div class="w3-row-padding">
+            <div class="w3-row w3-container w3-margin-bottom w3-border">
+                <div class="w3-container w3-white w3-center w3-padding">
+                    <p><b>Clase de {{ clase.nombre }}</b></p>
+                    <p>{{ clase.descripcion }}</p>
+                    <a href="{% url 'clase' %}" onclick=" w3_close()"
+                        class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
+                </div>
             </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom w3-border">
-            <div class="w3-container w3-white w3-center w3-padding">
-                <p><b>Clase #2</b></p>
-                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                    congue gravida diam non fringilla.</p>
-                <a href="{% url 'clase' %}" onclick=" w3_close()" class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
-            </div>
-        </div>
-        <div class="w3-third w3-container w3-margin-bottom w3-border">
-            <div class="w3-container w3-white w3-center w3-padding">
-                <p><b>Clase #3</b></p>
-                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                    congue gravida diam non fringilla.</p>
-                <a href="{% url 'clase' %}" onclick=" w3_close()" class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
+
 </div>
 
 {% endblock %}

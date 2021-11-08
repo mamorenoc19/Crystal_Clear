@@ -3,6 +3,7 @@ import random
 from django.conf import settings
 from django.core.mail import send_mail
 from Crystal_Clear_App.forms import claseForm
+from .models import Estudiante, Clase
 
 # Create your views here.
 def home(request):
@@ -37,15 +38,18 @@ def home_login(request):
 lista_estudiante = ['Camila', 'alejandra', 'jose miguel']
 
 def clases(request):
-    return(render(request, "Crystal_Clear_App/clases.html"))
+    clases = Clase.objects.all()
+    context = {'clases': clases}
+    return(render(request, "Crystal_Clear_App/clases.html",context))
 
 def clase(request):
-    context = {'estudiante':estudiante}
+    estudiantes = Estudiante.objects.all()
+    context = {'estudiante':estudiantes}
     return render(request, "Crystal_Clear_App/clase.html", context)
 
 
-estudiante = [{'nombre': 'camila', 'numero': 1},
-                    {'nombre': 'jose', 'numero': 2}, {'nombre': 'milerna', 'numero': 3}, {'nombre': 'carlos', 'numero': 4}]
+#estudiante = [{'nombre': 'camila', 'numero': 1},
+ #                   {'nombre': 'jose', 'numero': 2}, {'nombre': 'milerna', 'numero': 3}, {'nombre': 'carlos', 'numero': 4}]
 
 def examen(request):
     return render(request, "Crystal_Clear_App/examen.html")
