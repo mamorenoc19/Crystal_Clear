@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Crystal_Clear_Project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        "NAME": "db_crystal_clear",
+        "NAME": "crystal_clear",
         "USER": "root",
         "PASSWORD": "nqrSHZ24.",
         "HOST": "localhost",

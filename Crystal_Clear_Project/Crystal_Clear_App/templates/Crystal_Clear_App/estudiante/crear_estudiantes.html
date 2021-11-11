@@ -7,12 +7,12 @@
 {% endblock %}
 {% load widget_tweaks %}
 {% block content %}
-<h1 class="w3-jumbo w3-center"><b>Crear Profesor</b></h1>
-<div class="w3-container w3-center">
-    <form method="POST">
+<h1 class="w3-jumbo w3-center"><b>Crear Estudiante</b></h1>
+<div class="w3-container w3-center w3-pandding">
+    <form class="w3-pandding" method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <button style="margin-bottom: 10px;" type="submit">Agregar profesor</button>
+        <button style="margin-bottom: 10px;" type="submit">Agregar estudiante</button>
     </form>
     <!-- <form action="/action_page.php" target="_blank">
         <div class="w3-section">

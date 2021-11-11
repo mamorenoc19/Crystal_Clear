@@ -1,0 +1,18 @@
+{% extends "Crystal_Clear_App/base_login.html" %}
+{% load static %}
+{% load widget_tweaks %}
+<!-- Add your code below: -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+{% endblock %}
+{% load widget_tweaks %}
+{% block content %}
+<h1 class="w3-jumbo w3-center"><b>Crear Examen</b></h1>
+<div class="w3-container w3-center">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button style="margin-bottom: 10px;" type="submit">Agregar Examen</button>
+    </form>
+</div>
+{% endblock %}

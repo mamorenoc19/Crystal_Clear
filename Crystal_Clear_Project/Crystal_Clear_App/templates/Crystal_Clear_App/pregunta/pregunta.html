@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{% static 'Crystal_Clear_App/style.css' %}">
+{% endblock %}
+{% load widget_tweaks %}
+{% block content %}
+<h1 class="w3-jumbo w3-center"><b>Crear Pregunta</b></h1>
+<div class="w3-container w3-center">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button style="margin-bottom: 10px;" type="submit">Agregar profesor</button>
+    </form>
+</div>
+{% endblock %}

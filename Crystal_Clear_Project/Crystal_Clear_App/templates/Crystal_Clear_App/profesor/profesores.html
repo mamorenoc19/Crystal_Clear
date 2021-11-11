@@ -14,8 +14,8 @@
 <!-- CLASES -->
 <div class="w3-panel">
     <div class="w3-center w3-padding">
-        <table class="w3-table w3-striped w3-white">
-            <tr class="w3-center">
+        <table class="w3-table w3-striped w3-white w3-border">
+            <tr class="w3-center w3-border">
                 <td></td>
                 <td class="w3-center"><b>Nombre<b></td>
                 <td class="w3-center"><b>Apellido<b></td>
@@ -29,7 +29,7 @@
             {% endfor %}
         </table>
         <a href="{% url 'crear_profesores' %}" onclick=" w3_close()"
-            class="w3-cyan w3-hover-gray w3-button w3-xlarge w3-round-xlarge">Agregar profesor</a>
+            class="w3-cyan w3-hover-gray w3-button w3-xlarge w3-round-xlarge w3-margin">Agregar profesor</a>
     </div>
 </div>
 

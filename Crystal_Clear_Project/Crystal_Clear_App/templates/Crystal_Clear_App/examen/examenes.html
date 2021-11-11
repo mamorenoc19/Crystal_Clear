@@ -18,9 +18,9 @@
     <div class="w3-row-padding">
         <div class="w3-row w3-container w3-margin-bottom w3-border">
             <div class="w3-container w3-white w3-center w3-padding">
-                <p><b>Examen de {{ clase.nombre }}</b></p>
+                <p><b> {{ examen.nombre }}</b></p>
                 <p>{{ examen.descripcion }}</p>
-                <a href="{% url 'crear_examen' %}" onclick=" w3_close()"
+                <a href="{% url 'examen' %}" onclick=" w3_close()"
                     class="w3-cyan w3-hover-gray w3-button w3-round-xlarge">Ingreso</a>
             </div>
         </div>
